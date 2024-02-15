@@ -15,4 +15,9 @@ jobs:
         run: mvn clean install
       - name: Checking Directory Structure
         run: ls        
-        
+      - name: Uploading Artificats
+        uses: actions/upload-artifact@v4
+        with:
+          name: My-Artifacts
+          path: |
+            target
